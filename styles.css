@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+body{
+    background-color: #f0f4f8;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.titulo img{
+    width: 200px;
+    height: auto;
+    margin-left: 30px;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    color: #42628b;
+   
+}
+h2{
+    margin-top: -24px;
+    margin-bottom: 10px;
+    color: #42628b;
+}
+.rusuarios{
+    color: white;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+.links{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.link{
+    background: linear-gradient(135deg, #42628b, #13344e);
+    margin: 10px 0 10px 50px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.link:hover{
+    color: #f348d9;
+    transform: scale(1.1); 
+    background: linear-gradient(135deg, #1e3452, #395f97); /* Cambia a un degradado más oscuro en hover */
+    transition: background- 0.5s ease;
+    
+}
+svg{
+    width: 50px;
+    height: 50px;
+    fill: #ffffff;
+}
+svg:hover{
+    fill: #f348d9;
+}
+
+/* formulario para registrar nuevos usuarios */
+
+.todo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8; /* Fondo gris claro */
+    overflow: hidden;
+}
+/* Contenedor principal del formulario */
+.container-form {
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Sección de información con fondo degradado */
+.information {
+    flex: 1;
+    background: linear-gradient(135deg, #42628b, #13344e); /* Degradado de azul oscuro a rojo */
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: background-color 0.5s ease;
+    position: relative; /* Para posicionar elementos dentro del contenedor */
+}
+
+/* Imagen de logo */
+.information img {
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    margin-bottom: 20px;
+    border-radius: 40%; /* Hace la imagen circular si es cuadrada */
+    border: 3px solid white; /* Añade un borde blanco alrededor de la imagen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra para un efecto 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación al pasar el ratón por encima de la imagen */
+.information img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.information h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.information p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.information a {
+    color: #ffcccc; /* Rojo claro */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.information a:hover {
+    color: #ff9999; /* Rojo más fuerte */
+    border-bottom: 1px solid #ff9999;
+}
+
+/* Sección de formulario */
+.form-information {
+    flex: 1.5;
+    padding: 40px;
+    background-color: white;
+}
+
+.form-information h2 {
+    color: #003366; /* Azul oscuro */
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.form-information p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-information label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+select{
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus{
+    border-color: #003366; /* Azul oscuro */
+    outline: none;
+}
+/* Botón con fondo degradado */
+input[type="submit"] {
+    padding: 12px;
+    width: 100%;
+    background: linear-gradient(135deg, #1e1d66, #160946); /* Degradado de rojo oscuro a rojo claro */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background- 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #990000, #973939); /* Degradado más oscuro en hover */
+    transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+    transform: scale(1);
+}
+
+/* Transición para checkbox y enlace de olvidar contraseña */
+.olvidar {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.olvidar input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.olvidar a {
+    color: #cc0000; /* Rojo */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.olvidar a:hover {
+    color: #990000; /* Rojo más oscuro */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-form {
+    animation: fadeIn 1s ease-in-out;
+   
+}
+
+/* Efectos en la información con hover */
+.information:hover {
+    background: linear-gradient(135deg, #1e3452, #395f97); /* Cambia a un degradado más oscuro en hover */
+    transition: background- 0.5s ease;
+}
+
+/* Animación para el botón de enlace */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+}
+
+}
